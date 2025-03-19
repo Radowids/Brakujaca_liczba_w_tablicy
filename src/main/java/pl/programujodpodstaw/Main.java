@@ -11,6 +11,17 @@ public class Main {
         integersArray[3] = 6;
         integersArray[4] = 5;
 
+        int missingNumber = getMissingNumber(integersArray);
+
+        if (missingNumber != 0) {
+            System.out.println(missingNumber);
+        }else {
+            System.out.println("Nie brakuje żadnej liczby w tablicy");
+        }
+    }
+
+
+    public static int getMissingNumber(int[] integersArray){
         int greatestNumber = 0;
         int smallestNumber = 1000000000;
         for (int numberToCheck : integersArray) {
@@ -38,10 +49,6 @@ public class Main {
                 break;
             }
         }
-        if (missingNumber != 0) {
-            System.out.println(missingNumber);
-        }else {
-            System.out.println("Nie brakuje żadnej liczby w tablicy");
-        }
+        return missingNumber;
     }
 }
